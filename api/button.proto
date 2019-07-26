@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package base;
+
+
+message ButtonEvent
+{
+    int32 button_number = 1;
+}
+
+message SensorState
+{
+    int32 id     = 1;
+    int32 native_value = 2;
+    bool pressed = 3;
+}
+
+message SensorStates
+{
+	int32 shelf                 = 1;
+    repeated SensorState states = 2;
+    int32 sensor_id             = 3;
+}
